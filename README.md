@@ -1,3 +1,7 @@
+# My Portfolio Website
+For basic Next README see below! (This will be removed in future stages)
+---
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
