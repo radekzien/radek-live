@@ -1,6 +1,4 @@
-import Image from "next/image";
-import Link from "next/link";
-
+import { ProjectMapper } from "@/components/ProjectMapper";
 
 export default function Home() {
   return (
@@ -13,6 +11,7 @@ export default function Home() {
       <section id = 'projects'>
         <div>
           <h1>My Projects</h1>
+          <ProjectMapper />
         </div>
       </section>
       <section id = 'education'>
