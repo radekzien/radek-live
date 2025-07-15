@@ -1,5 +1,6 @@
 import { NavBar } from "@/components/NavBar";
 import { ProjectMapper } from "@/components/ProjectMapper";
+import { Overview } from "@/components/Overview";
 
 export default function Home() {
   return ( 
@@ -8,9 +9,7 @@ export default function Home() {
       <NavBar/>
       
       <section id = 'overview'>
-        <div>
-          <h1>Overview</h1>
-        </div>
+        <Overview />
       </section>
       
       <section id = 'projects'>
