@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "tw-animate-css";
+/*@import "tw-animate-css";*/
 
 @custom-variant dark (&:is(.dark *));
 
@@ -123,4 +123,19 @@ html {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-5px)
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 3s ease-in forwards;
 }
