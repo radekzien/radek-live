@@ -1,0 +1,1 @@
+export const githubMarkWhite = '/images/github-mark-white.png'
