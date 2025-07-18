@@ -3,6 +3,7 @@ import { ProjectMapper } from "@/components/ProjectMapper";
 import { Overview } from "@/components/Overview";
 import { QualiMapper } from "@/components/QualiMapper";
 import { Contact } from "@/components/Contact";
+
 export default function Home() {
   return ( 
     <div id = 'root'>
