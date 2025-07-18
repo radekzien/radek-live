@@ -1,4 +1,5 @@
 import { qualifications } from "@/data/qualifications";
+import { FadeInSection } from "./ui/FadeInSection";
 
 export const QualiMapper = () => {
   return (
@@ -25,12 +26,14 @@ export const QualiMapper = () => {
         }
 
         return (
-          <div key={qualification.title} className="p-4 border rounded shadow mb-4">
-            <h3>{qualification.title}</h3>
-            <h2>{qualification.school}</h2>
-            <h1>{qualification.location}</h1>
-            <p>{dateText}</p>
-          </div>
+          <FadeInSection key={qualification.title}>
+            <div className="p-4 border rounded shadow mb-4">
+                <h3>{qualification.title}</h3>
+                <h2>{qualification.school}</h2>
+                <h1>{qualification.location}</h1>
+                <p>{dateText}</p>
+            </div>
+          </FadeInSection>
         );
       })}
     </>

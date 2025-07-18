@@ -137,5 +137,12 @@ html {
 }
 
 .fadeIn {
-  animation: fadeIn 3s ease-in forwards;
+  opacity: 0;
+  transform: translateX(-5px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fadeIn.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
