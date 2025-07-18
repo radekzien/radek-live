@@ -25,7 +25,7 @@ export const Overview = () => {
                 ))}
             </div>
 
-            <div id = 'myDetails' className="mt-4">
+            <div id = 'myDetails' className="fadeIn mt-6 text-lg text-center leading-relaxed">
                 <p>
                     Hey, I'm Radek. I'm an aspiring developer hailing from the West Midlands.<br />
                     Currently I am in my Final year of BSc Computer Science in the University of Liverpool. <br/> 
