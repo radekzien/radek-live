@@ -11,7 +11,7 @@ export const ProjectMapper = () => {
           <p>{project.description}</p>
            {project.github && (
             <a href={project.github} target="_blank" rel="noopener noreferrer">
-              <img src={githubMarkWhite} alt="GitHub Logo" className="w-6 h-6" />
+              <img src={githubMarkWhite} alt="GitHub Logo" className="w-6 h-6 hover:scale-110" />
             </a>
           )}
           {project.link && (

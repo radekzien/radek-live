@@ -12,7 +12,7 @@ export default function Home() {
       <NavBar/>
     </div>
       
-      <section id = 'overview'>
+      <section id = 'overview' className="pt-16">
         <Overview />
       </section>
       

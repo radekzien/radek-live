@@ -3,19 +3,14 @@ import { Button } from "./ui/button"
 
 export const NavBar = () => {
   return (
-    <nav className="flex items-center justify-center gap-5">
-      <Button asChild>
-        <Link href="#overview">Overview</Link>
-      </Button>
-      <Button asChild>
-        <Link href="#projects">Projects</Link>
-      </Button>
-      <Button asChild>
-        <Link href="#education">Education and Qualification</Link>
-      </Button>
-      <Button asChild>
-        <Link href="#contact">Contact Me</Link>
-      </Button>
-    </nav>
+    <nav className="fixed top-0 shadow-sm z-50 w-full flex justify-between gap-4 m-2">
+      <div className="text-lg font-semibold">Radek.net</div>
+      <div className="flex gap-6 text-lg font-semibold mr-2">
+        <Link href="#overview" className="hover:scale-110 hover:font-bold">Overview</Link>
+        <Link href="#projects" className="hover:scale-110 hover:font-bold">Projects</Link>
+        <Link href="#education" className="hover:scale-110 hover:font-bold">Education and Qualification</Link>
+        <Link href="#contact" className="hover:scale-110 hover:font-bold">Contact Me</Link>
+        </div>
+      </nav>
   );
 };
