@@ -16,10 +16,11 @@ export default function Home() {
         <Overview />
       </section>
       
-      <section id = 'Projects' className="">
+      <section id = 'Projects' className="pt-10">
         <div>
           <h1 className="text-2xl font-bold mb-5">My Projects</h1>
-          <div className="">
+          <p className="mb-4 text-lg leading-relaxed">Here you can find some of my projects. To see my older or smaller projects please visit my github.</p>
+          <div className="flex flex-wrap gap-4 justify-center">
           <ProjectMapper />
           </div>
         </div>
