@@ -7,7 +7,7 @@ export const ProjectMapper = () => {
     <>
       {projects.map((project) => (
           <FadeInSection key={project.title} >
-            <div className="p-4 rounded-lg w-60 h-120 shadow mb-4 bg-[#383535] flex flex-col">
+            <div className="p-4 rounded-lg w-60 h-120 shadow mb-4 bg-[#383535] flex flex-col hover:scale-105">
               <img src={githubMarkWhite}></img>
                 <h3 className="p-2 text-lg font-bold justify-center text-center">{project.title}</h3>
                 <p className="text-center">{project.description}</p>
