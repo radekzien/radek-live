@@ -16,23 +16,25 @@ export default function Home() {
         <Overview />
       </section>
       
-      <section id = 'Projects'>
+      <section id = 'Projects' className="">
         <div>
-          <h1>My Projects</h1>
+          <h1 className="text-2xl font-bold mb-5">My Projects</h1>
+          <div className="">
           <ProjectMapper />
+          </div>
         </div>
       </section>
       
       <section id = 'Education'>
         <div>
-          <h1>Education and Qualifications</h1>
+          <h1 className="text-2xl font-bold mb-5">Education and Qualifications</h1>
           <QualiMapper />
         </div>
       </section>
       
       <section id = 'Contact'>
         <div>
-          <h1>Contact me</h1>
+          <h1 className="text-2xl font-bold mb-5">Contact me</h1>
           <Contact />
         </div>
       </section>

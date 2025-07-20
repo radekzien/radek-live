@@ -7,12 +7,12 @@ export const ProjectMapper = () => {
     <>
       {projects.map((project) => (
           <FadeInSection key={project.title} >
-            <div className="p-4 border rounded shadow mb-4">
-                <img src={project.thumbnail} alt={project.title} />
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
+            <div className="p-4 rounded-lg w-60 h-120 shadow mb-4 bg-[#383535] flex flex-col">
+              <img src={githubMarkWhite}></img>
+                <h3 className="p-2 text-lg font-bold justify-center text-center">{project.title}</h3>
+                <p className="text-center">{project.description}</p>
                 {project.github && (
-                  <a href={project.github} target="_blank" rel="noopener noreferrer">
+                  <a href={project.github} target="_blank" rel="noopener noreferrer" className="mt-auto flex pt-4">
                     <img src={githubMarkWhite} alt="GitHub Logo" className="w-6 h-6 hover:scale-110" />
                   </a>
                 )}
