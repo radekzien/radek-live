@@ -4,7 +4,8 @@ export type Qualification = {
     title: string,
     school: string,
     status: status, //change
-    location: string,
+    location?: string,
     started: Date,
-    finished?: Date
+    finished?: Date,
+    info?: String
 }
