@@ -22,6 +22,7 @@ export const qualifications : Qualification[] = [
         school: "Coursera",
         status: "Complete",
         started: new Date("2025-07-21"),
-        info: "You can see my certificate here: {ADD LINK}" 
+        info: "You can see my certificate here: ",
+        link: "/pdfs/Coursera19QMPQMLRQXW.pdf" 
     }
 ]

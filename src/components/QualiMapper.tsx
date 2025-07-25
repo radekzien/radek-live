@@ -1,5 +1,6 @@
 import { qualifications } from "@/data/qualifications";
 import { FadeInSection } from "./ui/FadeInSection";
+import { Link } from "lucide-react";
 
 export const QualiMapper = () => {
   const sortedQualis = [...qualifications].sort(
@@ -39,7 +40,16 @@ export const QualiMapper = () => {
                 <h2 className="text-md italic">{qualification.school}</h2>
                 <h1 className="text-sm italic">{qualification.location}</h1>
                 <p className="text-sm">{dateText}</p>
+                <p className="text-sm font-bold">{qualification.status}</p>
                 <p className="pt-2">{qualification.info}</p>
+                {qualification.link &&(<a
+                    href={qualification.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-500 underline hover:text-blue-300"
+                  >
+                    View Certificate
+                  </a>)}
             </div>
           </FadeInSection>
         );
