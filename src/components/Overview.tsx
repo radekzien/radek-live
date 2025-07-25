@@ -35,9 +35,9 @@ export const Overview = () => {
 
             <FadeInSection delay={delayTime}>
                 <div id = 'myDetails' className="mt-6 text-lg text-center leading-relaxed">
-                    <p>
-                        Hey, I'm Radek. I'm an aspiring developer hailing from the West Midlands.<br />
-                        Currently I am in my Final year of BSc Computer Science in the University of Liverpool. <br/> 
+                    <p> 
+                        Hey, I&apos;m Radek. I&apos;m an aspiring developer hailing from the West Midlands.<br />
+                        Currently I am in my Final year of BSc Computer Science in the University of Liverpool.<br /> 
                         <br />
                         Have a look through my page to learn more about me and my work.<br />
                     </p>

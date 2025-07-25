@@ -1,5 +1,4 @@
 import { FadeInSection } from "./ui/FadeInSection";
-require('dotenv').config()
 
 export const Contact = () => {
   return (

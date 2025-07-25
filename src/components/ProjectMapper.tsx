@@ -1,10 +1,11 @@
 "use client"
 import { projects } from "@/data/projects";
-import { githubMarkWhite } from '@/data/ImageLinks';
 import { FadeInSection } from "./ui/FadeInSection";
 import { tagColors } from "@/data/tagColors";
 import { useEffect, useRef, useState } from "react";
-import { filterpng } from "@/data/ImageLinks";
+import { Github, Filter} from "lucide-react";
+import Image from "next/image";
+import { FaGithub } from "react-icons/fa";
 
 export const ProjectMapper = () => {
   //Filter Constants
@@ -62,7 +63,7 @@ export const ProjectMapper = () => {
           onClick={() => setShowFilter(prev => !prev)}
           className="mb-4 px-3 py-1 mb-4 text-sm bg-gray-600 text-white rounded hover:bg-slate-700 transition"
         >
-          <img src={filterpng} className="w-4 h-5"></img>
+          <Filter className="w-4 h-5 text-white-500" />
         </button>
 
         {/* Tag filter checkboxes */}
@@ -100,13 +101,13 @@ export const ProjectMapper = () => {
       {filteredProjects.map((project) => (
           <FadeInSection key={project.title} >
             <div className="p-4 rounded-lg w-60 h-120 shadow mb-4 bg-[#383535] flex flex-col hover:scale-105 transition-all duration-500">
-              <img src={project.thumbnail}></img>
+              <Image src={project.thumbnail} width={230} height={225} alt="Project thumbnail" />
                 <h3 className="p-2 text-lg font-bold justify-center text-center">{project.title}</h3>
                 <p className="text-center">{project.description}</p>
 
                 <div className="mt-2 flex flex-wrap gap-2">
                   {project.tags && (
-                    project.tags.map((tag, index) => (
+                    project.tags.map((tag) => (
                       <span key={tag} className={`shadow-md px-2 py-1 text-xs text-white font-bold rounded-full mr-2 ${tagColors[tag]} hover:scale-105 transition-all duration-300 cursor-pointer`}>
                         {tag}
                       </span>
@@ -116,7 +117,7 @@ export const ProjectMapper = () => {
                 </div>
                 {project.github && (
                   <a href={project.github} target="_blank" rel="noopener noreferrer" className="mt-auto flex pt-4">
-                    <img src={githubMarkWhite} alt="GitHub Logo" className="w-6 h-6 hover:scale-110 transition-all duration-300" />
+                    <FaGithub className="w-6 h-6 hover:scale-110 transition-all duration-300" />
                   </a>
                 )}
                 {project.link && (

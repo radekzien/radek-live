@@ -1,6 +1,5 @@
 "use client"
 
-import { Chilanka } from "next/font/google"
 import { ReactNode, useEffect, useRef, useState } from "react"
 
 type QualiFadeInSectionProps = {

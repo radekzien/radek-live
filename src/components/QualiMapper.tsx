@@ -1,7 +1,6 @@
 import { qualifications } from "@/data/qualifications";
-import { FadeInSection } from "./ui/FadeInSection";
-import { Link } from "lucide-react";
 import { QualiFadeInSection } from "./ui/QualiFadeIn";
+import Image from "next/image";
 
 export const QualiMapper = () => {
   //Sorting by newest
@@ -47,7 +46,7 @@ export const QualiMapper = () => {
     <div
       className="absolute top-1/2 left-1/2 w-10 h-10 rounded-full bg-[#383535] transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center"
     >
-      <img src={qualification.thumbnail} alt="Qualification" className="w-6 h-6 object-contain" />
+      {qualification.thumbnail && ( <Image src={qualification.thumbnail} width={215} height={215} alt="Qualification" className="w-6 h-6 object-contain" />)}
     </div>
 
         {/* Card */}

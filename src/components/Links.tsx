@@ -1,5 +1,4 @@
-import { githubMarkWhite, linkedinlogo } from "@/data/ImageLinks"
-import { Link } from "lucide-react"
+import { FaGithub, FaLinkedin } from "react-icons/fa"
 
 export const Links = () => {
     return(
@@ -9,7 +8,7 @@ export const Links = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <img src={linkedinlogo} alt="LinkedIn" className="w-6 h-6 hover:scale-110 transition duration-300" />
+                    <FaLinkedin className="w-6 h-6 hover:scale-110 transition duration-300 text-white-600" />
                 </a>
 
                 <a
@@ -17,7 +16,7 @@ export const Links = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <img src={githubMarkWhite} alt="GitHub" className="w-6 h-6 hover:scale-110 transition duration-300" />
+                    <FaGithub className="w-6 h-6 hover:scale-110 transition duration-300 text-white-600" />
                 </a>
         </div>
     )
