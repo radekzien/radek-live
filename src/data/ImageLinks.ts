@@ -6,3 +6,4 @@ export const filterpng = '/images/filter-white.png'
 export const uollogo = "/images/uol.png"
 export const courseralogo = "/images/coursera.png"
 export const bwlogo = "/images/bwlogo.png"
+export const linkedinlogo = "/images/InBug-White.png"

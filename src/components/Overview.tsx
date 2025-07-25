@@ -1,3 +1,4 @@
+import { Links } from "./Links";
 import { FadeInSection } from "./ui/FadeInSection";
 
 const lines = [
@@ -17,8 +18,9 @@ export const Overview = () => {
                 <h1 id="myName" className="p-4 text-4xl font-bold">
                     Radoslaw Zienkiewicz
                 </h1>
+                <Links />
             </FadeInSection>
-            <div>
+            <div className="p-4">
                 {lines.map((line, i) => (
                 <FadeInSection key={i} delay={i * 0.3}>
                 <p

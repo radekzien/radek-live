@@ -26,7 +26,7 @@ export default function Home() {
         </div>
       </section>
       
-      <section id = 'Education'>
+      <section id = 'Education' className="pt-10">
         <div>
           <h1 className="text-2xl font-bold mb-5">Education and Qualifications</h1>
           <div className="grid gap-4 justify-center">
@@ -35,7 +35,7 @@ export default function Home() {
         </div>
       </section>
       
-      <section id = 'Contact'>
+      <section id = 'Contact' className="pt-10">
         <div>
           <h1 className="text-2xl font-bold mb-5">Contact me</h1>
           <Contact />
