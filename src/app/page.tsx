@@ -6,7 +6,7 @@ import { Contact } from "@/components/Contact";
 
 export default function Home() {
   return ( 
-    <div id = 'root'>
+    <div id = 'root' className="p-2">
 
     <div id= 'nav'>
       <NavBar/>
