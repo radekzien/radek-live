@@ -7,6 +7,7 @@ export type Qualification = {
     location?: string,
     started: Date,
     finished?: Date,
-    info?: String,
-    link?: string
+    info?: string,
+    link?: string,
+    thumbnail?: string
 }
