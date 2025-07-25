@@ -62,7 +62,7 @@ export const ProjectMapper = () => {
           onClick={() => setShowFilter(prev => !prev)}
           className="mb-4 px-3 py-1 mb-4 text-sm bg-gray-600 text-white rounded hover:bg-slate-700 transition"
         >
-          <img src={filterpng} className="w-6 h-6"></img>
+          <img src={filterpng} className="w-4 h-5"></img>
         </button>
 
         {/* Tag filter checkboxes */}
@@ -71,20 +71,17 @@ export const ProjectMapper = () => {
             style={{ minWidth: "240px" }}>
 
             <p className="mb-2 font-semibold">Select Tags to Filter:</p>
-            <div className="flex flex-col flex-wrap gap-4">
-              {allTags.map(tag => (
-                <label key={tag} className="flex items-center space-x-2 cursor-pointer">
-                  <input
-                    type="checkbox"
-                    checked={selectedTags.includes(tag)}
-                    onChange={() => toggleTag(tag)}
-                    className="w-4 h-4"
-                  />
-                  <span className={`px-2 py-1 rounded text-xs font-semibold ${tagColors[tag]}`}>
-                    {tag}
-                  </span>
-                </label>
-              ))}
+            <div className="mt-2 flex flex-wrap gap-2">
+              {allTags.map(tag => {
+                const isSelected = selectedTags.includes(tag)
+                return (
+                <span key={tag} onClick={() => toggleTag(tag)} className={`
+                border-1 shadow-md px-2 py-1 text-xs text-white font-bold rounded-full mr-2 cursor-pointer
+                ${isSelected ? tagColors[tag] : "bg-transparent text-white border-white hover:bg-gray-700"}
+              `}>
+                {tag}</span>
+                )
+              })}
               {/*Clear Tags Button*/}
               <button
               onClick={() => {
@@ -110,7 +107,7 @@ export const ProjectMapper = () => {
                 <div className="mt-2 flex flex-wrap gap-2">
                   {project.tags && (
                     project.tags.map((tag, index) => (
-                      <span key={tag} className={`shadow-md px-2 py-1 text-xs text-white font-bold rounded-full mr-2 ${tagColors[tag]} hover:scale-105 transition-all duration-300`}>
+                      <span key={tag} className={`shadow-md px-2 py-1 text-xs text-white font-bold rounded-full mr-2 ${tagColors[tag]} hover:scale-105 transition-all duration-300 cursor-pointer`}>
                         {tag}
                       </span>
                     )
