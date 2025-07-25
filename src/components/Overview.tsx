@@ -15,12 +15,12 @@ export const Overview = () => {
     return(
         <div>
             <FadeInSection>
-                <h1 id="myName" className="p-4 text-4xl font-bold">
+                <h1 id="myName" className="mb-4 text-4xl font-bold">
                     Radoslaw Zienkiewicz
                 </h1>
                 <Links />
             </FadeInSection>
-            <div className="p-4">
+            <div className="mt-4">
                 {lines.map((line, i) => (
                 <FadeInSection key={i} delay={i * 0.3}>
                 <p
