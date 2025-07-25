@@ -29,7 +29,9 @@ export default function Home() {
       <section id = 'Education'>
         <div>
           <h1 className="text-2xl font-bold mb-5">Education and Qualifications</h1>
-          <QualiMapper />
+          <div className="grid gap-4 justify-center">
+            <QualiMapper />
+          </div>
         </div>
       </section>
       

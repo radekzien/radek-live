@@ -76,7 +76,7 @@ export const ProjectMapper = () => {
                 const isSelected = selectedTags.includes(tag)
                 return (
                 <span key={tag} onClick={() => toggleTag(tag)} className={`
-                border-1 shadow-md px-2 py-1 text-xs text-white font-bold rounded-full mr-2 cursor-pointer
+                border-1 shadow-md px-2 py-1 text-xs text-white font-bold rounded-full mr-2 cursor-pointer w-auto
                 ${isSelected ? tagColors[tag] : "bg-transparent text-white border-white hover:bg-gray-700"}
               `}>
                 {tag}</span>
