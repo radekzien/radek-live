@@ -1,6 +1,7 @@
 import { qualifications } from "@/data/qualifications";
 import { FadeInSection } from "./ui/FadeInSection";
 import { Link } from "lucide-react";
+import { QualiFadeInSection } from "./ui/QualiFadeIn";
 
 export const QualiMapper = () => {
   //Sorting by newest
@@ -13,7 +14,7 @@ export const QualiMapper = () => {
 
   return (
     <>
-  <div className="relative max-w-5xl mx-auto px-4 py-10">
+  <div className="relative max-w-5xl mx-auto px-4 py-10 overflow-x: visible;">
 
   <div className="absolute top-0 bottom-0 left-1/2 w-0.5 bg-gray-600 transform -translate-x-1/2" />
       {sortedQualis.map((qualification, index) => {
@@ -39,8 +40,8 @@ export const QualiMapper = () => {
         }
 
  return (
-    <FadeInSection key={qualification.title}>
-      <div className="relative h-auto mb-8  hover:scale-110 transition" style={{ minHeight: '120px' }}>
+    <QualiFadeInSection key={qualification.title} fromLeft={isLeft} delay={index * 0.1}>
+      <div className="relative h-auto mb-8  hover:scale-110 transition duration-300" style={{ minHeight: '120px' }}>
         
         {/* Dot */}
         <span
@@ -70,7 +71,7 @@ export const QualiMapper = () => {
           )}
         </div>
       </div>
-    </FadeInSection>
+    </QualiFadeInSection>
           );
         })}
       </div>
