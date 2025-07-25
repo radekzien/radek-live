@@ -1,5 +1,5 @@
 import { Project } from "@/types/Project";
-import { githubMarkWhite, tcpIp, weblogo, jslogo } from '@/data/ImageLinks';
+import { tcpIp, weblogo, jslogo } from '@/data/ImageLinks';
 
 export const projects : Project[] = [
     {
