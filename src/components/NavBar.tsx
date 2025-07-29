@@ -14,10 +14,22 @@ export const NavBar = () => {
   //Scroll Handler
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      if (window.innerWidth >= 768) { 
+        setIsScrolled(window.scrollY > 10);
+      } else {
+        setIsScrolled(false);
+      }
     };
+
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleScroll);
+
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+    };
   }, []);
 
   //Click Off Handler
@@ -41,8 +53,9 @@ export const NavBar = () => {
   }, [isMenuOpen]);
 
   return (
+    <>
     <nav
-      className={`fixed top-0 left-0 right-0 z-10 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-10 transition-all duration-500 backdrop-blur md:backdrop-blur-none${
         isScrolled ? 'bg-black/30 backdrop-blur-md' : 'bg-transparent'
       }`}
       style={{
@@ -73,17 +86,17 @@ export const NavBar = () => {
           </>
         )}
 
-        <div className="max-w-7xl mx-auto flex justify-between items-center p-4 relative z-10">
+        <div  ref={wrapperRef} className="max-w-7xl mx-auto flex justify-between items-center p-4 relative z-10">
           <div className="text-3xl font-semibold text-white select-none">Radek.net</div>
 
 
-          <div ref={wrapperRef} className="relative">
+          <div className="relative md:hidden">
             {/*Hamburger menu for mobile */}
             <Button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}><MenuSquare /></Button>
 
             {/*Mobile Menu*/}
             {isMenuOpen && (
-              <div className="md:hidden bg-black/80 px-6 pb-4 pt-2 space-y-2 text-lg font-semibold text-white transition-all duration-300">
+              <div className="absolute top-16 z-50 right-4 bg-black/80 px-6 pb-4 pt-2 space-y-2 text-lg font-semibold text-white transition-all duration-300">
                 {navLinks.map((section, index) => (
                   <Link
                     key={index}
@@ -120,5 +133,6 @@ export const NavBar = () => {
         </div>
       </div>
     </nav>
+  </>
   );
 }
