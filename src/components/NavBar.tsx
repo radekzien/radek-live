@@ -1,5 +1,5 @@
 "use client";
-import { Hamburger, HamburgerIcon, MenuSquare } from "lucide-react";
+import { MenuSquare } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { Button } from "./ui/button";

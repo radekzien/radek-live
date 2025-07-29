@@ -3,7 +3,7 @@ import { projects } from "@/data/projects";
 import { FadeInSection } from "./ui/FadeInSection";
 import { tagColors } from "@/data/tagColors";
 import { useEffect, useRef, useState } from "react";
-import { Github, Filter} from "lucide-react";
+import { Filter} from "lucide-react";
 import Image from "next/image";
 import { FaGithub } from "react-icons/fa";
 
