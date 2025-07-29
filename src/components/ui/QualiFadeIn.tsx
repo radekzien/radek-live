@@ -41,8 +41,8 @@ export const QualiFadeInSection = ({
         className={`transition-opacity transition-transform duration-700 ease-out
             ${isVisible ? 'opacity-100 translate-x-0'
             : fromLeft
-            ? 'translate-x-96 opacity-0'
-            : '-translate-x-96 opacity-0'}`}
+            ? 'translate-x-20 opacity-0'
+            : '-translate-x-20 opacity-0'}`}
             style={{transitionDelay : `${delay}s`}}
             > {children} </div>
     )

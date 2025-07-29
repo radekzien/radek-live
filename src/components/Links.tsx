@@ -2,7 +2,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa"
 
 export const Links = () => {
     return(
-        <div className="flex relative space-x-4 pl-4">
+        <div className="flex relative space-x-4">
             <a
                     href="https://www.linkedin.com/in/radoslaw-zienkiewicz/"
                     target="_blank"
