@@ -92,7 +92,7 @@ export const NavBar = () => {
 
           <div className="relative md:hidden">
             {/*Hamburger menu for mobile */}
-            <Button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}><MenuSquare /></Button>
+            <MenuSquare size={28} className="md:hidden cursor-pointer hover:scale-105" onClick={() => setIsMenuOpen(!isMenuOpen)} />
 
             {/*Mobile Menu*/}
             {isMenuOpen && (
