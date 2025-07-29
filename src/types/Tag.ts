@@ -10,7 +10,8 @@ export const tags = [
     'javascript',
     'nextjs',
     'node',
-    'WIP'
+    'WIP',
+    'sql'
 ]
 
 export type Tag = typeof tags[number];
