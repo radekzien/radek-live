@@ -12,5 +12,6 @@ export const tagColors: Record<Tag, string> = {
   javascript: "bg-yellow-500",
   nextjs: "bg-amber-500",
   node: "bg-teal-500",
-  WIP: "bg-red-500"
+  WIP: "bg-red-500",
+  sql:"bg-purple-500"
 };
