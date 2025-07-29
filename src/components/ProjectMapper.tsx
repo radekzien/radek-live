@@ -58,12 +58,12 @@ export const ProjectMapper = () => {
   return (
     <>
       {/* Button to toggle filter panel */}
-      <div className="w-full flex pl-4 md:pl-0 md:ml-6 relative mb-4"  ref={wrapperRef}>
+      <div className="w-full flex pl-4 md:pl-0 md:left-50 relative mb-2"  ref={wrapperRef}>
         <button
           onClick={() => setShowFilter(prev => !prev)}
           className=" px-3 py-1 mb-4 text-sm bg-gray-600 text-white rounded hover:bg-slate-700 transition"
         >
-          <Filter className="w-5 h-6 md:w-4 md:h-5 text-white-500" />
+          <Filter className="w-5 h-6 text-white-500" />
         </button>
 
         {/* Tag filter checkboxes */}
