@@ -21,7 +21,7 @@ export const qualifications : Qualification[] = [
         thumbnail: uollogo
     },
     {
-        title: "Google Cyber Security Cerftificate",
+        title: "Google Cyber Security Certificate",
         school: "Coursera",
         status: "Complete",
         started: new Date("2025-07-21"),
