@@ -1,9 +1,14 @@
 "use client";
+import { Hamburger, HamburgerIcon, MenuSquare } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { Button } from "./ui/button";
 
 export const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navLinks = ["Overview", "Projects", "Education", "Contact"]
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,8 +53,31 @@ export const NavBar = () => {
 
         <div className="max-w-7xl mx-auto flex justify-between items-center p-4 relative z-10">
           <div className="text-3xl font-semibold text-white select-none">Radek.net</div>
-          <div className="flex gap-6 text-lg font-semibold">
-            {["Overview", "Projects", "Education", "Contact"].map((section, index) => (
+
+          {/*Hamburger menu for mobile */}
+          <Button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}><MenuSquare /></Button>
+
+        {/*Mobile Menu*/}
+         {isMenuOpen && (
+          <div className="md:hidden bg-black/80 px-6 pb-4 pt-2 space-y-2 text-lg font-semibold text-white transition-all duration-300">
+            {navLinks.map((section, index) => (
+              <Link
+                key={index}
+                href={`#${section}`}
+                onClick={() => setIsMenuOpen(false)} // Close menu on click
+                className="block hover:text-gray-300"
+              >
+                {section === "Education"
+                  ? "Education and Qualifications"
+                  : section}
+              </Link>
+            ))}
+          </div>
+         )}
+
+          {/*Desktop menu */}
+          <div className="hidden md:flex gap-6 text-lg font-semibold">
+            {navLinks.map((section, index) => (
               <Link
                 key={index}
                 href={`#${section}`}
@@ -63,8 +91,9 @@ export const NavBar = () => {
               </Link>
             ))}
           </div>
+
         </div>
       </div>
     </nav>
   );
-};
+}
