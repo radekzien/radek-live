@@ -92,11 +92,11 @@ export const NavBar = () => {
 
           <div className="relative md:hidden">
             {/*Hamburger menu for mobile */}
-            <Button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}><MenuSquare /></Button>
+            <MenuSquare size={28} className="md:hidden cursor-pointer hover:scale-105" onClick={() => setIsMenuOpen(!isMenuOpen)} />
 
             {/*Mobile Menu*/}
             {isMenuOpen && (
-              <div className="absolute top-16 z-50 right-4 bg-black/80 px-6 pb-4 pt-2 space-y-2 text-lg font-semibold text-white transition-all duration-300">
+              <div className="absolute top-16 z-50 right-4 bg-black/80 px-6 pb-4 pt-2 space-y-2 text-lg font-semibold text-white transition-all duration-300 rounded-sm">
                 {navLinks.map((section, index) => (
                   <Link
                     key={index}
