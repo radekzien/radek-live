@@ -58,17 +58,17 @@ export const ProjectMapper = () => {
   return (
     <>
       {/* Button to toggle filter panel */}
-      <div className="relative inline-flex items-start mb-4"  ref={wrapperRef}>
+      <div className="w-full flex pl-4 md:pl-0 md:ml-6 relative mb-4"  ref={wrapperRef}>
         <button
           onClick={() => setShowFilter(prev => !prev)}
-          className="mb-4 px-3 py-1 mb-4 text-sm bg-gray-600 text-white rounded hover:bg-slate-700 transition"
+          className=" px-3 py-1 mb-4 text-sm bg-gray-600 text-white rounded hover:bg-slate-700 transition"
         >
-          <Filter className="w-4 h-5 text-white-500" />
+          <Filter className="w-5 h-6 md:w-4 md:h-5 text-white-500" />
         </button>
 
         {/* Tag filter checkboxes */}
         {showFilter && (
-          <div className="absolute top-0 left-full ml-2 p-4 border rounded bg-gray-800 text-white max-w-md shadow-lg z-50"
+          <div className="absolute top-full left-auto mt-2 p-4 border rounded bg-gray-800 text-white max-w-xs shadow-lg z-50"
             style={{ minWidth: "240px" }}>
 
             <p className="mb-2 font-semibold">Select Tags to Filter:</p>
@@ -100,8 +100,8 @@ export const ProjectMapper = () => {
       {/*Project Mapper*/}
       {filteredProjects.map((project) => (
           <FadeInSection key={project.title} >
-            <div className="p-4 rounded-lg w-60 h-120 shadow mb-4 bg-[#383535] flex flex-col hover:scale-105 transition-all duration-500">
-              <Image src={project.thumbnail} width={230} height={225} alt="Project thumbnail" />
+            <div className="p-4 rounded-lg w-60 h-auto md:h-120 shadow mb-4 bg-[#383535] flex flex-col hover:scale-105 transition-all duration-500">
+              <Image src={project.thumbnail} width={230} height={225} alt="Project thumbnail" className="hidden md:block"/>
                 <h3 className="p-2 text-lg font-bold justify-center text-center">{project.title}</h3>
                 <p className="text-center">{project.description}</p>
 
