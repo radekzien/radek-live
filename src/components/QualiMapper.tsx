@@ -39,7 +39,7 @@ export const QualiMapper = () => {
         }
 
  return (
-    <QualiFadeInSection key={qualification.title} fromLeft={isLeft} delay={index * 0.1}>
+    <QualiFadeInSection key={qualification.title} fromLeft={isLeft} delay={0}>
       <div className="relative h-auto mb-8  md:hover:scale-110 transition duration-300" style={{ minHeight: '120px' }}>
         
         {/* Dot */}
