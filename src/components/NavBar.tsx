@@ -1,15 +1,17 @@
 "use client";
 import { Hamburger, HamburgerIcon, MenuSquare } from "lucide-react";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "./ui/button";
 
 export const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navLinks = ["Overview", "Projects", "Education", "Contact"]
+  const wrapperRef = useRef<HTMLDivElement>(null);
 
 
+  //Scroll Handler
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -17,6 +19,26 @@ export const NavBar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  //Click Off Handler
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        wrapperRef.current &&
+        !wrapperRef.current.contains(event.target as Node)
+      ) {
+        setIsMenuOpen(false);
+      }
+    }
+
+    if (isMenuOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isMenuOpen]);
 
   return (
     <nav
@@ -54,26 +76,29 @@ export const NavBar = () => {
         <div className="max-w-7xl mx-auto flex justify-between items-center p-4 relative z-10">
           <div className="text-3xl font-semibold text-white select-none">Radek.net</div>
 
-          {/*Hamburger menu for mobile */}
-          <Button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}><MenuSquare /></Button>
 
-        {/*Mobile Menu*/}
-         {isMenuOpen && (
-          <div className="md:hidden bg-black/80 px-6 pb-4 pt-2 space-y-2 text-lg font-semibold text-white transition-all duration-300">
-            {navLinks.map((section, index) => (
-              <Link
-                key={index}
-                href={`#${section}`}
-                onClick={() => setIsMenuOpen(false)} // Close menu on click
-                className="block hover:text-gray-300"
-              >
-                {section === "Education"
-                  ? "Education and Qualifications"
-                  : section}
-              </Link>
-            ))}
+          <div ref={wrapperRef} className="relative">
+            {/*Hamburger menu for mobile */}
+            <Button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}><MenuSquare /></Button>
+
+            {/*Mobile Menu*/}
+            {isMenuOpen && (
+              <div className="md:hidden bg-black/80 px-6 pb-4 pt-2 space-y-2 text-lg font-semibold text-white transition-all duration-300">
+                {navLinks.map((section, index) => (
+                  <Link
+                    key={index}
+                    href={`#${section}`}
+                    onClick={() => setIsMenuOpen(false)} // Close menu on click
+                    className="block hover:text-gray-300"
+                  >
+                    {section === "Education"
+                      ? "Education and Qualifications"
+                      : section}
+                  </Link>
+                ))}
+              </div>
+            )}
           </div>
-         )}
 
           {/*Desktop menu */}
           <div className="hidden md:flex gap-6 text-lg font-semibold">
