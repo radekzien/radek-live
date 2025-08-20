@@ -68,32 +68,33 @@ export const ProjectMapper = () => {
 
         {/* Tag filter checkboxes */}
         {showFilter && (
-          <div className="absolute top-full left-auto mt-2 p-4 border rounded bg-gray-800 text-white max-w-xs shadow-lg z-50"
+          <div className="absolute top-full left-0 mt-2 p-4 border rounded bg-gray-800 text-white max-w-xs shadow-lg z-50"
             style={{ minWidth: "240px" }}
             ref={wrapperRef}>
 
             <p className="mb-2 font-semibold">Select Tags to Filter:</p>
-            <div className="mt-2 flex flex-wrap gap-2">
+            <div className="mt-2 flex flex-wrap gap-2 items-start">
               {allTags.map(tag => {
                 const isSelected = selectedTags.includes(tag)
                 return (
                 <span key={tag} onClick={() => toggleTag(tag)} className={`
-                border-1 shadow-md px-2 py-1 text-xs text-white font-bold rounded-full mr-2 cursor-pointer w-auto
+                border shadow-md px-2 py-1 text-xs text-white font-bold rounded-full cursor-pointer w-auto
                 ${isSelected ? tagColors[tag] : "bg-transparent text-white border-white hover:bg-gray-700"}
               `}>
                 {tag}</span>
                 )
               })}
-              {/*Clear Tags Button*/}
-              <button
-              onClick={() => {
-                  setSelectedTags([]);
-                  setShowFilter(false);
-                }}
-                className="mt-4 px-3 py-1 bg-red-600 rounded hover:bg-red-300 transition text-xs">
-                Clear tags
-            </button>
+
             </div>
+            {/*Clear Tags Button*/}
+            <div className="flex justify-end mt-4">
+              <button
+                onClick={() => { setSelectedTags([]); setShowFilter(false); }}
+                className="px-3 py-1 bg-red-600 rounded hover:bg-red-300 transition text-xs"
+              >
+                Clear tags
+              </button>
+              </div>
           </div>
         )}
       </div>
