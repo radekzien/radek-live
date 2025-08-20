@@ -58,7 +58,7 @@ export const ProjectMapper = () => {
   return (
     <>
       {/* Button to toggle filter panel */}
-      <div className="w-full flex pl-4 md:pl-0 md:left-50 relative mb-2">
+      <div className="w-full flex pl-4 md:pl-0 md:left-10 relative mb-2">
         <button
           onClick={() => setShowFilter(prev => !prev)}
           className=" px-3 py-1 mb-4 text-sm bg-gray-600 text-white rounded hover:bg-slate-700 transition"
