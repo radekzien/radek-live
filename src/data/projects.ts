@@ -1,5 +1,5 @@
 import { Project } from "@/types/Project";
-import { tcpIp, weblogo, jslogo } from '@/data/ImageLinks';
+import { tcpIp, weblogo, jslogo, weatherlogo } from '@/data/ImageLinks';
 
 export const projects : Project[] = [
     {
@@ -22,6 +22,13 @@ export const projects : Project[] = [
         thumbnail: jslogo,
         tags: ['javascript', 'backend'],
         github: 'https://github.com/radekzien/Concurrent-Call-Counter'
+    },
+    {
+        title: "Auto Weather Updates",
+        description: "A script that fetches emails and locations and weather data from a database and an API to send to users.",
+        thumbnail: weatherlogo,
+        tags: ['python', 'backend', 'sql'],
+        github: 'https://github.com/radekzien/weather-automation'
     }
 
 ]
