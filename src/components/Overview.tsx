@@ -23,12 +23,19 @@ export const Overview = () => {
             <div className="mt-4">
                 {lines.map((line, i) => (
                 <FadeInSection key={i} delay={i * 0.3}>
-                <p
-                    className="p-1 font-bold text-lg italic"
-                    style={{ marginLeft: `${(i * 12) + i * i * 2}px` }}
+                    <p
+                        className="block md:hidden p-1 font-bold italic text-lg"
+                        style={{ marginLeft: `${(i * 12) + i * i * 2}px` }}
                     >
-                    {line}
-                </p>
+                        {line}
+                    </p>
+
+                    <p
+                        className="hidden md:block p-1 font-bold italic text-3xl"
+                        style={{ marginLeft: `${(i * 12) + i * i * 2}px` }}
+                    >
+                        {line}
+                    </p>
             </FadeInSection>
                 ))}
             </div>

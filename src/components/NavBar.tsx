@@ -2,7 +2,7 @@
 import { MenuSquare } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { Button } from "./ui/button";
+import LogoButton from "./LogoButton";
 
 export const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -55,7 +55,7 @@ export const NavBar = () => {
   return (
     <>
     <nav
-      className={`fixed top-0 left-0 right-0 z-10 transition-all duration-500 backdrop-blur md:backdrop-blur-none${
+      className={`fixed top-0 left-0 right-0 z-10 transition-all duration-500 backdrop-blur md:backdrop-blur-none pb-16${
         isScrolled ? 'bg-black/30 backdrop-blur-md' : 'bg-transparent'
       }`}
       style={{
@@ -87,7 +87,7 @@ export const NavBar = () => {
         )}
 
         <div  ref={wrapperRef} className="max-w-7xl mx-auto flex justify-between items-center p-4 relative z-10">
-          <div className="text-3xl font-semibold text-white select-none">Radek.net</div>
+          <LogoButton />
 
 
           <div className="relative md:hidden">
