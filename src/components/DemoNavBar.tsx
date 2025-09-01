@@ -63,7 +63,7 @@ export default function DemoNavBar() {
         <div className="max-w-7xl mx-auto flex justify-between items-center p-4 relative z-10">
           <LogoButton />
 
-          <div className="hidden md:flex gap-6 text-lg font-semibold">
+          <div className="flex gap-6 text-lg font-semibold">
             <Link
               href="/"
               className={`transition-all duration-300 text-white ${
@@ -72,7 +72,7 @@ export default function DemoNavBar() {
                   : "opacity-100 hover:scale-110"
               }`}
             >
-              Home
+              {"< Back"}
             </Link>
           </div>
         </div>
