@@ -12,7 +12,7 @@ export default function DemoInbox() {
   useEffect(() => {
     fetch("/api/inbox")
       .then((res) => res.json())
-      .then((data) => setMessages(data.messages))
+      .then((data) => setMessages(data.messages || []))
       .finally(() => setLoading(false));
   }, []);
 
