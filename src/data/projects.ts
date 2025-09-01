@@ -13,7 +13,7 @@ export const projects : Project[] = [
         title: "This Portfolio Website",
         description: "Here is the github link to the repository for this website.",
         thumbnail: weblogo,
-        tags:['typescript', 'react', 'frontend'],
+        tags:['typescript', 'react', 'frontend', 'backend'],
         github: 'https://github.com/radekzien/radek-live'
     },
     {
@@ -28,7 +28,8 @@ export const projects : Project[] = [
         description: "A script that fetches emails and locations and weather data from a database and an API to send to users.",
         thumbnail: weatherlogo,
         tags: ['python', 'backend', 'sql'],
-        github: 'https://github.com/radekzien/weather-automation'
+        github: 'https://github.com/radekzien/weather-automation',
+        link: '/weather-demo'
     }
 
 ]

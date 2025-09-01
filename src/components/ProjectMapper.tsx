@@ -3,9 +3,10 @@ import { projects } from "@/data/projects";
 import { FadeInSection } from "./ui/FadeInSection";
 import { tagColors } from "@/data/tagColors";
 import { useEffect, useRef, useState } from "react";
-import { Filter} from "lucide-react";
+import { Filter, Play} from "lucide-react";
 import Image from "next/image";
 import { FaGithub } from "react-icons/fa";
+import Link from "next/link";
 
 export const ProjectMapper = () => {
   //Filter Constants
@@ -102,7 +103,7 @@ export const ProjectMapper = () => {
       {/*Project Mapper*/}
       {filteredProjects.map((project) => (
           <FadeInSection key={project.title} >
-            <div className="p-4 rounded-lg w-60 h-auto md:h-120 shadow mb-4 bg-[#383535] flex flex-col hover:scale-105 transition-all duration-500">
+            <div className="p-4 rounded-lg w-60 h-auto md:h-120 shadow mb-4 bg-[#383535] flex flex-col h-full hover:scale-105 transition-all duration-500">
               <Image src={project.thumbnail} width={230} height={225} alt="Project thumbnail" className="hidden md:block"/>
                 <h3 className="p-2 text-lg font-bold justify-center text-center">{project.title}</h3>
                 <p className="text-center">{project.description}</p>
@@ -117,15 +118,18 @@ export const ProjectMapper = () => {
                     )
                   )}
                 </div>
-                {project.github && (
-                  <a href={project.github} target="_blank" rel="noopener noreferrer" className="mt-auto flex pt-4">
-                    <FaGithub className="w-6 h-6 hover:scale-110 transition-all duration-300" />
-                  </a>
-                )}
-                {project.link && (
-                  <a href = {project.link} target = "_blank" rel="noopener noreferrer"></a>
-                )}
-                
+                <div className="flex gap-4 mt-auto">
+                  {project.github && (
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="mt-auto flex pt-4">
+                      <FaGithub className="w-6 h-6 hover:scale-110 transition-all duration-300" />
+                    </a>
+                  )}
+                  {project.link && (
+                    <Link href = {project.link} className="mt-auto flex pt-4">
+                      <Play className="w-6 h-6 hover:scale-110 transition-all duration-300" />
+                    </Link>
+                  )}
+                </div>
             </div>
           </FadeInSection>
       ))}
