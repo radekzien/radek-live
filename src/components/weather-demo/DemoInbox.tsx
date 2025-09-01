@@ -2,10 +2,11 @@
 import { useEffect, useState } from "react";
 import { ChevronRight, Loader, Mail } from "lucide-react";
 import { FadeInSection } from "../ui/FadeInSection";
+import { Email } from "@/types/Email";
 
 export default function DemoInbox() {
-  const [messages, setMessages] = useState<any[]>([]);
-  const [selectedMessage, setSelectedMessage] = useState<any>(null);
+  const [messages, setMessages] = useState<Email[]>([]);
+  const [selectedMessage, setSelectedMessage] = useState<Email | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

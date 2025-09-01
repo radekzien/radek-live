@@ -1,4 +1,4 @@
-import { google } from "googleapis";
+import { gmail_v1, google } from "googleapis";
 import { NextResponse } from "next/server";
 
 export async function GET() {
@@ -35,7 +35,7 @@ export async function GET() {
         const from = headers.find(h => h.name === 'From')?.value || '(Unknown Sender)';
 
 
-        function decodeBody(data: string | undefined): string {
+        function decodeBody(data: string): string {
             if (!data) return '';
             let base64 = data.replace(/-/g, '+').replace(/_/g, '/');
             while (base64.length % 4) {
@@ -50,7 +50,7 @@ export async function GET() {
 
 
 
-        function findBody(payload: any): { content: string; mimeType: string } {
+        function findBody(payload: gmail_v1.Schema$MessagePart | undefined): { content: string; mimeType: string } {
             if (!payload) return { content: '', mimeType: '' };
 
             if (payload.body?.data) {
