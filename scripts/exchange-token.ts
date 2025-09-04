@@ -10,7 +10,12 @@ const oAuth2Client = new google.auth.OAuth2(
 );
 
 async function main() {
-  const code = "4/0AVMBsJjc6V7a3gywCuc4b-vs8kctgu0qxNGTpGu9gmiQCQJydPXFHFTddKAztcIqfkx-tw";
+  const code = process.argv[2];
+
+  if (!code) {
+    console.error("Usage: ts-node exchangeToken.ts <auth_code>");
+    process.exit(1);
+  }
 
   const { tokens } = await oAuth2Client.getToken(code);
   console.log("Access Token:", tokens.access_token);
