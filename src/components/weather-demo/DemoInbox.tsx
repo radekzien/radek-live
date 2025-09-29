@@ -8,11 +8,20 @@ export default function DemoInbox() {
   const [messages, setMessages] = useState<Email[]>([]);
   const [selectedMessage, setSelectedMessage] = useState<Email | null>(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     fetch("/api/inbox")
       .then((res) => res.json())
-      .then((data) => setMessages(data.messages || []))
+      .then((data) => {
+        const msgs = data.messages || [];
+        if (msgs.length === 0) {
+          setError(true);
+        } else {
+          setMessages(msgs);
+        }
+      })
+      .catch(() => setError(true))
       .finally(() => setLoading(false));
   }, []);
 
@@ -23,6 +32,12 @@ export default function DemoInbox() {
           <p className="text-center">Fetching inbox, please wait...</p>
           <Loader className="animate-spin text-white w-6 h-6" />
         </div>
+      ) : error ? (
+        <FadeInSection>
+          <div className="border-2 rounded-md p-5 m-2 w-fit border-[#4D4D4D] text-center">
+            <p className="text-white font-semibold">Unable to fetch emails at the moment. Please refresh the page or check back shortly.</p>
+          </div>
+        </FadeInSection>
       ) : (
         <FadeInSection>
           <div className="border-2 rounded-md pl-5 pr-5 pt-2 pb-2 m-2 w-fit border-[#4D4D4D]">
