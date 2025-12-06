@@ -54,7 +54,7 @@ export const Overview = () => {
                         In my free time I enjoy listening to and making music, DJing and staying active.<br />
                         <br />
                         Have a look through my page to learn more about me and my work.<br />
-                        If you wish to find out more, feel free to contact me by filling out the form at the bottom of this page<br />
+                        If you wish to find out more, feel free to contact me by filling out the form at the bottom of this page.<br />
                     </p>
                 </div>
             </FadeInSection>
