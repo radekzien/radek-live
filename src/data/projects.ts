@@ -4,7 +4,7 @@ import { tcpIp, weblogo, jslogo, weatherlogo } from '@/data/ImageLinks';
 export const projects : Project[] = [
     {
         title: 'TCP-IP Java Model',
-        description: 'A simple Java model showing how TCP and other basic protocls work with features such as error detection and retransmission.',
+        description: 'A simple Java model showing how TCP and other basic protocols work with features such as error detection and retransmission.',
         thumbnail: tcpIp,
         tags: ['java', 'swing'],
         github: 'https://github.com/radekzien/TCP-IP-Java-Model'
@@ -25,7 +25,7 @@ export const projects : Project[] = [
     },
     {
         title: "Auto Weather Updates",
-        description: "A script that fetches emails and locations and weather data from a database and an API to send to users.",
+        description: "A script that fetches emails, locations, and weather data from a database and an API to send to users.",
         thumbnail: weatherlogo,
         tags: ['python', 'backend', 'sql'],
         github: 'https://github.com/radekzien/weather-automation',
