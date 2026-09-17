@@ -1,4 +1,4 @@
-type status = 'Ongoing' | 'Complete'
+type status = 'Ongoing' | 'Complete' | 'Current' | 'Previous'
 
 export type Qualification = {
     title: string,

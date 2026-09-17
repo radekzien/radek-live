@@ -2,11 +2,9 @@ import { Links } from "./Links";
 import { FadeInSection } from "./ui/FadeInSection";
 
 const lines = [
-  "Creative.",
+  "Graduate Tech Developer",
   "Tech Enthusiast.",
   "Critical Thinker.",
-  "Network Enthusiast.",
-  "Aspiring Developer."
 ];
 
 const delayTime = lines.length * 0.3;
@@ -43,18 +41,18 @@ export const Overview = () => {
             <FadeInSection delay={delayTime}>
                 <div id = 'myDetails' className="mt-6 text-lg text-center leading-relaxed">
                     <p> 
-                        Hey, I&apos;m Radek. I&apos;m an aspiring developer hailing from the West Midlands.<br />
-                        Currently I am in my Final year of BSc Computer Science in the University of Liverpool.<br /> 
-                        I&apos;ve spent 4 years working in Hospitality for companies like Greggs and TGI Friday&apos;s<br />
-                        and I&apos;ve been a tour guide in Birmingham for over a year.<br />
+                        My name is Radek. I'm a software developer from the West Midlands. I graduated from the University of Liverpool <br/>
+                        with a First Class BSc Computer Science with Honours. <br />
                         <br />
-                        My interests include Full-Stack Web Development, Cyber Security, and Networks and I am actively exploring <br />
-                        different ways to gain skills and experience in all of those areas.<br />
+                        Before development I spent 4 years working in hospitality for companies like Greggs and TGI Friday's and over 2 <br/>
+                        years as a tour guide. <br />
                         <br />
-                        In my free time I enjoy listening to and making music, DJing and staying active.<br />
-                        <br />
+                        I love music and everything music related. In my free time I produce, mix, compose, and play the piano. My Honours Year <br />
+                        Project was a desktop application which detected the key of a piece of music, a perfect blend of my passion for music and love for <br />
+                        coding.
+                        <br/>
                         Have a look through my page to learn more about me and my work.<br />
-                        If you wish to find out more, feel free to contact me by filling out the form at the bottom of this page.<br />
+                        If you wish to find out more, feel free to contact me by filling out the form at the bottom of this page.<br/>
                     </p>
                 </div>
             </FadeInSection>
