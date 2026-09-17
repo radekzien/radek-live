@@ -104,8 +104,15 @@ export const ProjectMapper = () => {
       {filteredProjects.map((project) => (
           <FadeInSection key={project.title} >
             <div className="p-4 rounded-lg w-60 h-auto md:h-120 shadow mb-4 bg-[#383535] flex flex-col h-full hover:scale-105 transition-all duration-500">
-              <Image src={project.thumbnail} width={230} height={225} alt="Project thumbnail" className="hidden md:block"/>
-                <h3 className="p-2 text-lg font-bold justify-center text-center">{project.title}</h3>
+              <div className="hidden md:block w-full h-[225px] relative overflow-hidden rounded-md">
+                <Image
+                  src={project.thumbnail}
+                  fill
+                  alt={`${project.title} thumbnail`}
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="p-2 text-lg font-bold justify-center text-center">{project.title}</h3>
                 <p className="text-center">{project.description}</p>
 
                 <div className="mt-2 flex flex-wrap gap-2">
@@ -125,7 +132,7 @@ export const ProjectMapper = () => {
                     </a>
                   )}
                   {project.link && (
-                    <Link href = {project.link} className="mt-auto flex pt-4">
+                    <Link href = {project.link} target="_blank" rel="noopener noreferrer" className="mt-auto flex pt-4">
                       <Play className="w-6 h-6 hover:scale-110 transition-all duration-300" />
                     </Link>
                   )}

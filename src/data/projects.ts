@@ -1,5 +1,5 @@
 import { Project } from "@/types/Project";
-import { tcpIp, weblogo, jslogo, weatherlogo } from '@/data/ImageLinks';
+import { tcpIp, weblogo, jslogo, weatherlogo, trebleclef, friendlylogo } from '@/data/ImageLinks';
 
 export const projects : Project[] = [
     {
@@ -17,19 +17,19 @@ export const projects : Project[] = [
         github: 'https://github.com/radekzien/radek-live'
     },
     {
-        title: "Concurrent Call Counter",
-        description: "This is a program that counts the amount of calls that occured concurrently based on data fetched from an API.",
-        thumbnail: jslogo,
-        tags: ['javascript', 'backend'],
-        github: 'https://github.com/radekzien/Concurrent-Call-Counter'
+        title: "Musical Key Detector",
+        description: "This is program detects the key of an audio file using a self-implemented version of the Fast Fourier Transform." ,
+        thumbnail: trebleclef,
+        tags: ['python'],
+        github: 'https://github.com/radekzien/key-analyser'
     },
     {
-        title: "Auto Weather Updates",
-        description: "A script that fetches emails, locations, and weather data from a database and an API to send to users.",
-        thumbnail: weatherlogo,
-        tags: ['python', 'backend', 'sql'],
-        github: 'https://github.com/radekzien/weather-automation',
-        link: '/weather-demo'
+        title: "Friendly Transport Ltd.",
+        description: "The main website for Friendly Transport Ltd. Developed using typescript and react.",
+        thumbnail: friendlylogo,
+        tags: ['typescript', 'react', 'frontend'],
+        link: 'https://www.friendly-transport.co.uk/'
+
     }
 
 ]

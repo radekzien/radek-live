@@ -15,9 +15,10 @@ export const qualifications : Qualification[] = [
     {
         title: "BSC Computer Science",
         school: "University of Liverpool",
-        status: "Ongoing",
+        status: "Complete",
         location: "Liverpool",
         started: new Date("2023-09-30"),
+        finished: new Date("2026-07-13"),
         thumbnail: uollogo
     },
     {
@@ -28,5 +29,12 @@ export const qualifications : Qualification[] = [
         info: "You can see my certificate here: ",
         link: "/pdfs/Coursera19QMPQMLRQXW.pdf",
         thumbnail: courseralogo
+    },
+    {
+        title: "Graduate Tech Developer",
+        school: "Isio",
+        status: "Current",
+        location: "Birmingham",
+        started: new Date("2026-09-23"),
     }
 ]
