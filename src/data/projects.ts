@@ -1,5 +1,5 @@
 import { Project } from "@/types/Project";
-import { tcpIp, weblogo, jslogo, weatherlogo, trebleclef, friendlylogo } from '@/data/ImageLinks';
+import { tcpIp, weblogo, trebleclef, friendlylogo } from '@/data/ImageLinks';
 
 export const projects : Project[] = [
     {

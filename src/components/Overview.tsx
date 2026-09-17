@@ -41,10 +41,10 @@ export const Overview = () => {
             <FadeInSection delay={delayTime}>
                 <div id = 'myDetails' className="mt-6 text-lg text-center leading-relaxed">
                     <p> 
-                        My name is Radek. I'm a software developer from the West Midlands. I graduated from the University of Liverpool <br/>
+                        My name is Radek. I&apos;m a software developer from the West Midlands. I graduated from the University of Liverpool <br/>
                         with a First Class BSc Computer Science with Honours. <br />
                         <br />
-                        Before development I spent 4 years working in hospitality for companies like Greggs and TGI Friday's and over 2 <br/>
+                        Before development I spent 4 years working in hospitality for companies like Greggs and TGI Friday&apos;s and over 2 <br/>
                         years as a tour guide. <br />
                         <br />
                         I love music and everything music related. In my free time I produce, mix, compose, and play the piano. My Honours Year <br />
